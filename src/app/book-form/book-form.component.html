@@ -1,0 +1,6 @@
+<h2>Cadastro/Edição</h2>
+<form (submit)="onSave()" *ngIf="book">
+  <label>Título: <input [(ngModel)]="book.title" name="title" required /></label>
+  <label>Autor: <input [(ngModel)]="book.author" name="author" required /></label>
+  <button type="submit">Salvar</button>
+</form>

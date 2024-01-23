@@ -1,0 +1,11 @@
+<h2>Lista</h2>
+<ul *ngIf="books && books.length > 0">
+  <li *ngFor="let book of books">
+    {{ book.title }} por {{ book.author }}
+    <div class="buttons-container">
+      <button (click)="editBook(book)">Editar</button>
+      <button (click)="deleteBook(book.id)">Excluir</button>
+    </div>
+  </li>
+</ul>
+<p *ngIf="!books || books.length === 0">Nenhum livro encontrado.</p>
